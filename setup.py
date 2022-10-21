@@ -11,7 +11,7 @@ def read(fname):
 setup(
     name='LordNzb',
     version='0.0.0.1',
-    url='https://github.com/LordBex/flasky-settings',
+    url='https://github.com/LordBex/LordNzb',
     license='',
     author='lordbex',
     author_email='lordibex@protonmail.com',
