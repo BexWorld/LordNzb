@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='LordNzb',
-    version='0.0.0.1',
+    version='0.0.0.2',
     url='https://github.com/LordBex/LordNzb',
     license='',
     author='lordbex',
@@ -25,9 +25,7 @@ setup(
 
     ],
     classifiers=[
-        'Environment :: Web Environment', 'Intended Audience :: Developers',
         'Operating System :: OS Independent', 'Programming Language :: Python',
         'Programming Language :: Python :: 3.10',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ])
