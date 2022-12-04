@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='LordNzb',
-    version='0.0.0.2',
+    version='0.0.1.1',
     url='https://github.com/LordBex/LordNzb',
     license='',
     author='lordbex',
@@ -22,6 +22,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
+        'regex'
 
     ],
     classifiers=[

@@ -11,8 +11,9 @@ Beispiel:
 
    from LordNzb import parser
    nzb = parser(pfad)
-   print(n.get_meta_dict())
+   print(n.to_dict())
 
+Die Variable 'nzb' bitte nur als Read-Only verwenden
 
 
 Ausgabe:
