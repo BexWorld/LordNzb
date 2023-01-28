@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='LordNzb',
-    version='0.0.1.1',
+    version='0.1.0',
     url='https://github.com/LordBex/LordNzb',
     license='',
     author='lordbex',

@@ -81,7 +81,7 @@ class NZB:
 
     @CachedProperty
     def nzblnk(self):
-        return f"nzblnk://?t={self.link_name}&h={self.link_header}&p={self.link_pass}&g={self.link_one_group}"
+        return f"nzblnk://?t={self.link_name}&h={self.link_header}&p={self.link_pass}&g={self.link_one_group}&d={self.date_time_utc}"
 
     def get_date(self):
         if self.date_time_utc is not None:
