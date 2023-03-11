@@ -41,6 +41,10 @@ class NZB:
         return _nzb
 
     @CachedProperty
+    def name_with_password(self):
+        return f"{self.name}{{{{{self.password}}}}}"
+
+    @CachedProperty
     def size(self):
         size = self.raw_size
         for size_name in ['bytes', 'kb', 'mb', 'gb', 'tb']:
@@ -80,6 +84,10 @@ class NZB:
         return f"https://binsearch.info/?q={self.link_header}"
 
     @CachedProperty
+    def bbc(self):
+        return f"{self.name}|{self.header}|{','.join(self.groups)}|{self.password}|{{{self.date_time_utc}}}"
+
+    @CachedProperty
     def nzblnk(self):
         return f"nzblnk://?t={self.link_name}&h={self.link_header}&p={self.link_pass}&g={self.link_one_group}&d={self.date_time_utc}"
 
@@ -109,6 +117,7 @@ class NZB:
         return {
             "filename": self.filename,
             "name": self.name,
+            "name_with_password": self.name_with_password,
             "header": self.header,
             "password": self.password,
             "group": self.groups,
@@ -118,13 +127,14 @@ class NZB:
             "nzbindex": self.nzbindex,
             "nzbking": self.nzbking,
             "binsearch": self.binsearch,
-            "nzblnk": self.nzblnk
+            "nzblnk": self.nzblnk,
+            "bbc": self.bbc
         }
 
     @staticmethod
     def get_dict_keys() -> list:
-        return ['filename', 'name', 'header', 'password', 'group', 'raw_size', 'size', 'date', 'nzbindex', 'nzbking',
-                'binsearch', 'nzblnk']
+        return ['filename', 'name', 'name_with_password', 'header', 'password', 'group', 'raw_size', 'size', 'date', 'nzbindex', 'nzbking',
+                'binsearch', 'nzblnk', 'bbc']
 
 
 def parser(file_path):
