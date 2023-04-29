@@ -166,17 +166,19 @@ def parser(file_path):
 
     # get Group
 
-    group = []
+    group = set()
 
     ns = regXMLNS.search(root.tag)
     if ns is not None:
         ns = ns.group(0)
     else:
         ns = ""
-    groups = ele.findall(".//" + ns + "group")
+    groups = root.findall(".//" + ns + "group")
 
     for g in groups:
-        group.append(g.text)
+        group.add(g.text)
+
+    group = list(group)
 
     # Date
 

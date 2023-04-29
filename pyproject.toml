@@ -24,3 +24,6 @@ dependencies = [
 [project.urls]
 homepage = "https://github.com/BexWorld/LordNzb"
 repository = "https://github.com/BexWorld/LordNzb"
+
+[project.scripts]
+lordnzb = "LordNzb.cli:main"
