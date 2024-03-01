@@ -31,7 +31,7 @@ Ausgabe:
         "group-2",
         "group-3"
       ],
-      "size": "1.00 gb",
+      "size": "1.00 GB",
       "date": "YYYY-MM-DD HH:MM:SS",
       "nzbindex": "https://nzbindex.nl/?q=sample_header",
       "nzbking": "https://nzbking.com/?q=sample_header",

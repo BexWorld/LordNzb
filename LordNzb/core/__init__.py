@@ -47,7 +47,7 @@ class NZB:
     @CachedProperty
     def size(self):
         size = self.raw_size
-        for size_name in ['bytes', 'kb', 'mb', 'gb', 'tb']:
+        for size_name in ['Bytes', 'KB', 'MB', 'GB', 'TB']:
             if size >= 1024:
                 size = size / 1024
             else:
